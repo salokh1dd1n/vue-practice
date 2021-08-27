@@ -1,15 +1,15 @@
 <template>
-  <div id="app">
+  <div id="root">
 
   </div>
 </template>
 
 <script>
-
 export default {
-  name: "App",
-  components: {
-  },
+  name: "MyComponent",
 };
 </script>
 
+<style scoped>
+
+</style>
