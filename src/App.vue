@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import MyComponent from "./components/MyComponent";
-import HomeWork from "./components/HomeWork";
+import MyComponent from "./components/lesson1/MyComponent";
+import HomeWork from "./components/lesson1/HomeWork";
 export default {
   name: "App",
   components: {
