@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <MyComponent />
-    <HomeWork />
+    <userCard></userCard>
   </div>
 </template>
 
 <script>
-import MyComponent from "./components/lesson1/MyComponent";
-import HomeWork from "./components/lesson1/HomeWork";
+import userCard from "./components/userCard";
+
 export default {
   name: "App",
   components: {
-    MyComponent,
-    HomeWork,
+    userCard,
   },
 };
 </script>
