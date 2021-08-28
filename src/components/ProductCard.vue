@@ -5,7 +5,7 @@
       <h5 class="card-title">Model: {{ title }}</h5>
       <p class="card-text">Price: {{ price }}$</p>
       <p class="card-text">Amount: {{ amount }}</p>
-      <a href="#" class="btn btn-primary w-100">Book</a>
+      <a href="#" class="btn btn-primary w-100" @click="addToBasket">Book</a>
     </div>
   </div>
 </template>
@@ -32,6 +32,11 @@ export default {
     amount: {
       type: Number,
       default: 0,
+    },
+  },
+  methods: {
+    addToBasket() {
+      this.$emit("basket");
     },
   },
 };
