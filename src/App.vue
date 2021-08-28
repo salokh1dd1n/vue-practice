@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <secret-component></secret-component>
+    <home-work></home-work>
   </div>
 </template>
 
 <script>
-import SecretComponent from "./components/SecretComponent";
+import HomeWork from "./components/HomeWork";
 export default {
   name: "App",
   components: {
-    SecretComponent,
+    HomeWork,
   },
 };
 </script>
