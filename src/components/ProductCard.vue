@@ -13,7 +13,12 @@
 <script>
 export default {
   name: "ProductCard",
-  props: ["title", "price", "imgUrl", "amount"],
+  props: {
+    title: String,
+    price: Number,
+    imgUrl: String,
+    amount: Number,
+  },
 };
 </script>
 
