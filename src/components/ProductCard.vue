@@ -14,8 +14,16 @@
 export default {
   name: "ProductCard",
   props: {
-    title: String,
-    price: Number,
+    title: {
+      type: String,
+      validator(value) {
+        return value.length < 50;
+      },
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
     imgUrl: {
       type: String,
       default:
