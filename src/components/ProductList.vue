@@ -46,8 +46,6 @@ export default {
         {
           title: "Chevrolet Spark",
           price: 5000,
-          imgUrl: "https://picsum.photos/500/500",
-          amount: 20,
         },
         {
           title: "Chevrolet Spark",
@@ -58,8 +56,6 @@ export default {
         {
           title: "Chevrolet Spark",
           price: 5000,
-          imgUrl: "https://picsum.photos/500/500",
-          amount: 20,
         },
       ],
     };
