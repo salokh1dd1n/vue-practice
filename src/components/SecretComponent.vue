@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.c .blue {
+.blue {
   padding: 10px;
   background-color: blue;
   color: white;
