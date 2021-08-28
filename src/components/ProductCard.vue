@@ -1,11 +1,14 @@
 <template>
   <div class="container">
+    <p class="display-5 text-center my-3">List of Cars</p>
+    <hr />
     <div class="card" style="width: 18rem">
       <img :src="imgUrl" class="card-img-top" alt="bla" />
       <div class="card-body">
-        <h5 class="card-title">{{ title }}</h5>
+        <h5 class="card-title">Model: {{ title }}</h5>
+        <p class="card-text">Price: {{ price }}$</p>
         <p class="card-text">Amount: {{ amount }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary w-100">Book</a>
       </div>
     </div>
   </div>
