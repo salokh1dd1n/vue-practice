@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <home-work></home-work>
+    <productCard />
   </div>
 </template>
 
 <script>
-import HomeWork from "./components/HomeWork";
+import ProductCard from "./components/ProductCard";
+
 export default {
   name: "App",
   components: {
-    HomeWork,
+    ProductCard,
   },
 };
 </script>
