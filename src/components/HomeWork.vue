@@ -35,6 +35,20 @@
               :max="imgSizes.maxHeight"
             />
           </div>
+          <div class="mb-3">
+            <label for="angel" class="form-label">
+              Angel {{ imgSizes.currentAngel }}:
+            </label>
+            <input
+              class="form-range"
+              type="range"
+              id="angel"
+              :value="imgSizes.currentAngel"
+              @input="imgSizes.currentAngel = $event.target.value"
+              :min="imgSizes.minAngel"
+              :max="imgSizes.maxAngel"
+            />
+          </div>
         </form>
       </div>
     </div>
@@ -53,6 +67,9 @@ export default {
         minHeight: 50,
         currentWidth: 200,
         currentHeight: 200,
+        currentAngel: 0,
+        minAngel: 0,
+        maxAngel: 360,
       },
     };
   },
@@ -61,6 +78,7 @@ export default {
       return {
         width: `${this.imgSizes.currentWidth}px`,
         height: `${this.imgSizes.currentHeight}px`,
+        transform: `rotate(${this.imgSizes.currentAngel}deg)`,
       };
     },
   },
