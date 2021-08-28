@@ -16,8 +16,15 @@ export default {
   props: {
     title: String,
     price: Number,
-    imgUrl: String,
-    amount: Number,
+    imgUrl: {
+      type: String,
+      default:
+        "https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg",
+    },
+    amount: {
+      type: Number,
+      default: 0,
+    },
   },
 };
 </script>
