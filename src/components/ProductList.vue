@@ -14,6 +14,7 @@
           :title="product.title"
           :price="product.price"
           :amount="product.amount"
+          @basket="addToBasket(product)"
         />
       </div>
     </div>
@@ -59,6 +60,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    addToBasket(value) {
+      console.log(value);
+    },
   },
 };
 </script>
