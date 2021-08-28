@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <p class="display-5 text-center my-3">List of Cars</p>
+    <my-input />
     <hr />
     <div class="row justify-content-center">
       <div
@@ -23,11 +24,12 @@
 
 <script>
 import ProductCard from "./ProductCard";
-
+import MyInput from "./MyInput";
 export default {
   name: "ProductList",
   components: {
     ProductCard,
+    MyInput,
   },
   data() {
     return {
