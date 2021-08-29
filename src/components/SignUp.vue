@@ -40,8 +40,13 @@
           type="password"
           class="form-control"
           id="password"
-          v-model="form.password"
+          v-model="v$.form.password.$model"
         />
+        <div
+          class="input-errors"
+          v-for="error of v$.form.password.$errors"
+          :key="error.$uid"
+        >
           <div class="error-msg">{{ error.$message }}</div>
         </div>
       </div>
@@ -168,6 +173,10 @@ export default {
         email: {
           required,
           email,
+        },
+        password: {
+          required,
+          minLength: minLength(8),
         },
       },
     };
