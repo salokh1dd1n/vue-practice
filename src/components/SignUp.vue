@@ -24,8 +24,15 @@
           type="email"
           class="form-control"
           id="email"
-          v-model="form.email"
+          v-model="v$.form.email.$model"
         />
+        <div
+          class="input-errors"
+          v-for="error of v$.form.email.$errors"
+          :key="error.$uid"
+        >
+          <div class="error-msg">{{ error.$message }}</div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password:</label>
@@ -35,6 +42,8 @@
           id="password"
           v-model="form.password"
         />
+          <div class="error-msg">{{ error.$message }}</div>
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label">Country of residence:</label>
@@ -100,7 +109,7 @@
 
 <script>
 import useVuelidate from "@vuelidate/core";
-import { required, minLength } from "@vuelidate/validators";
+import { required, minLength, maxLength, email } from "@vuelidate/validators";
 
 export default {
   name: "SignUp",
@@ -154,6 +163,11 @@ export default {
         login: {
           required,
           minLength: minLength(3),
+          maxLength: maxLength(25),
+        },
+        email: {
+          required,
+          email,
         },
       },
     };
