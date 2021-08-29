@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3 class="mt-3 text-center">Sign Up</h3>
-    <form @submit.prevent="someAction()">
+    <form @submit.prevent="onSubmit">
       <div class="mb-3">
         <label for="login" class="form-label">Login:</label>
         <input
