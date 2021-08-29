@@ -1,7 +1,17 @@
 <template>
   <div class="container">
     <p class="display-5 text-center my-3">List of Cars</p>
-    <my-input />
+    <div class="input-group mb-3">
+      <my-input v-model="searchText" />
+      {{ searchText }}
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        id="button-addon2"
+      >
+        Search
+      </button>
+    </div>
     <hr />
     <div class="row justify-content-center">
       <div
@@ -25,6 +35,7 @@
 <script>
 import ProductCard from "./ProductCard";
 import MyInput from "./MyInput";
+
 export default {
   name: "ProductList",
   components: {
@@ -33,6 +44,7 @@ export default {
   },
   data() {
     return {
+      searchText: "",
       products: [
         {
           title: "Chevrolet Spark",
