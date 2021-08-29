@@ -113,8 +113,8 @@
 </template>
 
 <script>
-import useVuelidate from "@vuelidate/core";
 import { required, maxLength, minLength, email } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 
 export default {
   name: "SignUp",
