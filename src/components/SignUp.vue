@@ -114,7 +114,7 @@
 
 <script>
 import useVuelidate from "@vuelidate/core";
-import { required, minLength, maxLength, email } from "@vuelidate/validators";
+import { required, maxLength, minLength, email } from "@vuelidate/validators";
 
 export default {
   name: "SignUp",
