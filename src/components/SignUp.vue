@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3 class="mt-3 text-center">Sign Up</h3>
-    <form @submit.prevent="onSubmit" novalidate>
+    <form @submit.prevent="someAction()">
       <div class="mb-3">
         <label for="login" class="form-label">Login:</label>
         <input
@@ -12,10 +12,10 @@
         />
         <div
           class="input-errors"
-          v-for="(error, index) in v$.form.login.$errors"
-          :key="index"
+          v-for="error of v$.form.login.$errors"
+          :key="error.$uid"
         >
-          {{ error.message }}
+          <div class="error-msg">{{ error.$message }}</div>
         </div>
       </div>
       <div class="mb-3">
@@ -93,16 +93,14 @@
           <label class="form-check-label" for="female">Female</label>
         </div>
       </div>
-      <button :disabled="v$.form.invalid" type="submit" class="btn btn-primary">
-        Submit
-      </button>
+      <button class="btn btn-primary">Submit</button>
     </form>
   </div>
 </template>
 
 <script>
 import useVuelidate from "@vuelidate/core";
-import { required } from "@vuelidate/validators";
+import { required, minLength } from "@vuelidate/validators";
 
 export default {
   name: "SignUp",
@@ -155,10 +153,7 @@ export default {
       form: {
         login: {
           required,
-          simpleValidator(value) {
-            console.log(value);
-            return value.length > 5;
-          },
+          minLength: minLength(3),
         },
       },
     };
