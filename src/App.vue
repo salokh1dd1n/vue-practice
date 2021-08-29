@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <product-list />
+    <user-form />
   </div>
 </template>
 
 <script>
-import ProductList from "./components/ProductList";
+import UserForm from "./components/UserForm";
 export default {
   name: "App",
   components: {
-    ProductList,
+    UserForm,
   },
 };
 </script>
