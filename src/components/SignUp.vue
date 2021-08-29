@@ -1,16 +1,22 @@
 <template>
   <div class="container">
     <h3 class="mt-3 text-center">Sign Up</h3>
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit" novalidate>
       <div class="mb-3">
         <label for="login" class="form-label">Login:</label>
         <input
-          :class="{ error"
           type="email"
           class="form-control"
           id="login"
-          v-model="form.login"
+          v-model="v$.form.login.$model"
         />
+        <div
+          class="input-errors"
+          v-for="(error, index) in v$.form.login.$errors"
+          :key="index"
+        >
+          {{ error.message }}
+        </div>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address:</label>
