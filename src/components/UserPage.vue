@@ -7,16 +7,38 @@
     title="Too important information"
     @close="closeModal"
   >
-    <ul>
-      <li>List #1</li>
-      <li>List #2</li>
-    </ul>
-    <template v-slot:footer>
-      <button type="button" class="btn btn-secondary" @click="closeModal">
-        Close Modal
-      </button>
-      <button type="button" class="btn btn-primary">Submit</button>
-    </template>
+    <div class="information">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+        velit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+        velit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+        velit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+        velit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+        velit.
+      </p>
+    </div>
   </modal>
 </template>
 

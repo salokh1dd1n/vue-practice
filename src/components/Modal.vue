@@ -1,6 +1,6 @@
 <template>
   <div class="modal fade show">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">{{ title }}</h5>
@@ -11,7 +11,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" ref="modalBody" @scroll="onBodyScroll">
           <slot></slot>
         </div>
         <div class="modal-footer">
@@ -19,7 +19,13 @@
             <button type="button" class="btn btn-secondary" @click="closeModal">
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button
+              :disabled="!isScrolledFully"
+              type="button"
+              class="btn btn-primary"
+            >
+              Save changes
+            </button>
           </slot>
         </div>
       </div>
@@ -36,9 +42,23 @@ export default {
       default: "",
     },
   },
+  data() {
+    return {
+      isScrolledFully: false,
+    };
+  },
   methods: {
     closeModal() {
       this.$emit("close");
+    },
+    onBodyScroll() {
+      let modalBody = this.$refs.modalBody;
+      if (
+        modalBody.scrollHeight ===
+        modalBody.scrollTop + modalBody.clientHeight
+      ) {
+        this.isScrolledFully = true;
+      }
     },
   },
 };
