@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import UserPage from "./components/lesson7/UserPage";
+import UserPage from "./components/lesson8/UserPage";
 export default {
   name: "App",
   components: {

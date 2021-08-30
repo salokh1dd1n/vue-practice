@@ -11,12 +11,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div
-          class="modal-body"
-          style="height: 200px"
-          ref="modalBody"
-          @scroll="onBodyScroll"
-        >
+        <div class="modal-body" style="height: 200px" @scroll="onScroll">
           <slot></slot>
         </div>
         <div class="modal-footer">
@@ -39,8 +34,10 @@
 </template>
 
 <script>
+import scrollHandler from "../../mixins/scrollHandler";
 export default {
   name: "Modal",
+  mixins: [scrollHandler],
   props: {
     title: {
       type: String,
@@ -52,22 +49,16 @@ export default {
       isScrolledFully: false,
     };
   },
-  mounted() {
-    let modalBody = this.$refs.modalBody;
-    modalBody.scrollTop = modalBody.scrollHeight - modalBody.clientHeight;
-  },
+  // mounted() {
+  //   let modalBody = this.$refs.modalBody;
+  //   modalBody.scrollTop = modalBody.scrollHeight - modalBody.clientHeight;
+  // },
   methods: {
     closeModal() {
       this.$emit("close");
     },
-    onBodyScroll() {
-      let modalBody = this.$refs.modalBody;
-      if (
-        modalBody.scrollHeight ===
-        modalBody.scrollTop + modalBody.clientHeight
-      ) {
-        this.isScrolledFully = true;
-      }
+    onScrollEnd() {
+      this.isScrolledFully = true;
     },
   },
 };
