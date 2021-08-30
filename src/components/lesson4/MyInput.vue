@@ -12,7 +12,7 @@ export default {
   name: "MyInput",
   model: {
     prop: "value",
-    event: "change",
+    event: "input",
   },
   data() {
     return {

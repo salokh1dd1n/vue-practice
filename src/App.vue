@@ -6,6 +6,7 @@
 
 <script>
 import UserPage from "./components/UserPage";
+// import SignUp from "./components/lesson6/SignUp";
 export default {
   name: "App",
   components: {

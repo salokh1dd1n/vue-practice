@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" tabindex="-1">
+  <div class="modal fade show">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -7,18 +7,20 @@
           <button
             type="button"
             class="btn-close"
-            @close="closeModal"
+            @click="closeModal"
             aria-label="Close"
           ></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <slot></slot>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" @close="closeModal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <slot name="footer">
+            <button type="button" class="btn btn-secondary" @click="closeModal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </slot>
         </div>
       </div>
     </div>
@@ -42,4 +44,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.modal {
+  display: block;
+}
+</style>

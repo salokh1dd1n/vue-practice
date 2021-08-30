@@ -5,7 +5,7 @@
   <modal
     v-if="isModalOpen"
     title="Too important information"
-    @close="isModalOpen = false"
+    @close="closeModal"
   />
 </template>
 
@@ -22,6 +22,9 @@ export default {
   },
   methods: {
     openModal() {
+      this.isModalOpen = true;
+    },
+    closeModal() {
       this.isModalOpen = false;
     },
   },
