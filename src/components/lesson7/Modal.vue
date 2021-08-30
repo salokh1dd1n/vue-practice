@@ -11,7 +11,12 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body" ref="modalBody" @scroll="onBodyScroll">
+        <div
+          class="modal-body"
+          style="height: 200px"
+          ref="modalBody"
+          @scroll="onBodyScroll"
+        >
           <slot></slot>
         </div>
         <div class="modal-footer">
@@ -46,6 +51,10 @@ export default {
     return {
       isScrolledFully: false,
     };
+  },
+  mounted() {
+    let modalBody = this.$refs.modalBody;
+    modalBody.scrollTop = modalBody.scrollHeight - modalBody.clientHeight;
   },
   methods: {
     closeModal() {
