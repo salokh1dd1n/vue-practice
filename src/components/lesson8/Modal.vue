@@ -16,6 +16,10 @@
         </div>
         <div class="modal-footer">
           <slot name="footer">
+            <custom-component>
+              <template v-slot:name> Salohiddin</template>
+              <template v-slot:author> Salohiddin</template>
+            </custom-component>
             <button type="button" class="btn btn-secondary" @click="closeModal">
               Close
             </button>
@@ -35,6 +39,7 @@
 
 <script>
 import scrollHandler from "../../mixins/scrollHandler";
+
 export default {
   name: "Modal",
   mixins: [scrollHandler],
@@ -49,10 +54,6 @@ export default {
       isScrolledFully: false,
     };
   },
-  // mounted() {
-  //   let modalBody = this.$refs.modalBody;
-  //   modalBody.scrollTop = modalBody.scrollHeight - modalBody.clientHeight;
-  // },
   methods: {
     closeModal() {
       this.$emit("close");
