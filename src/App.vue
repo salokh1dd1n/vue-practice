@@ -1,15 +1,7 @@
 <template>
-  <div id="app">
-    <user-page />
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
   </div>
+  <router-view />
 </template>
-
-<script>
-import UserPage from "./components/lesson8/UserPage";
-export default {
-  name: "App",
-  components: {
-    UserPage,
-  },
-};
-</script>
