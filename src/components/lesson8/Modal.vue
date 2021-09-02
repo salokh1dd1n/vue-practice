@@ -16,10 +16,6 @@
         </div>
         <div class="modal-footer">
           <slot name="footer">
-            <custom-component>
-              <template v-slot:name> Salohiddin</template>
-              <template v-slot:author> Salohiddin</template>
-            </custom-component>
             <button type="button" class="btn btn-secondary" @click="closeModal">
               Close
             </button>
@@ -38,7 +34,7 @@
 </template>
 
 <script>
-import scrollHandler from "../../mixins/scrollHandler";
+import scrollHandler from "../../mixins/lesson9-most-useless/scrollHandler";
 
 export default {
   name: "Modal",
