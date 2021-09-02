@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div id="root" class="container">
     <label for="email">Email:</label>
     <input
       type="email"
