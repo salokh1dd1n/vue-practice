@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div id="root" class="container">
     <div class="user-card">
       <h1>Научу зарабатывать от 50 000р. в час</h1>
       <div class="main-information flex">

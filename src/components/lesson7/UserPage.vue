@@ -1,45 +1,47 @@
 <template>
-  <button type="button" class="btn btn-outline-primary" @click="openModal">
-    Send something
-  </button>
-  <modal
-    v-if="isModalOpen"
-    title="Too important information"
-    @close="closeModal"
-  >
-    <div class="information">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
-        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
-        velit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
-        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
-        velit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
-        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
-        velit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
-        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
-        velit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-        fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
-        reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
-        velit.
-      </p>
-    </div>
-  </modal>
+  <div class="container">
+    <button type="button" class="btn btn-outline-primary" @click="openModal">
+      Send something
+    </button>
+    <modal
+      v-if="isModalOpen"
+      title="Too important information"
+      @close="closeModal"
+    >
+      <div class="information">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+          reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+          velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+          reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+          velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+          reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+          velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+          reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+          velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          fugit illum nisi quisquam recusandae? Ad ducimus est mollitia nisi rem
+          reprehenderit sit velit? Ab, beatae minus nostrum obcaecati repellat
+          velit.
+        </p>
+      </div>
+    </modal>
+  </div>
 </template>
 
 <script>

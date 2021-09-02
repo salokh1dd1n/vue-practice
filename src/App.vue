@@ -1,15 +1,69 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/lesson1">Lesson #1</router-link> |
-    <router-link to="/lesson2">Lesson #2</router-link> |
-    <router-link to="/lesson3">Lesson #3</router-link> |
-    <router-link to="/lesson4">Lesson #4</router-link> |
-    <router-link to="/lesson5">Lesson #5</router-link> |
-    <router-link to="/lesson6">Lesson #6</router-link> |
-    <router-link to="/lesson7">Lesson #7</router-link> |
-    <router-link to="/lesson8">Lesson #8</router-link> |
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <router-link class="nav-link active" aria-current="page" to="/">
+              Home
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about"> About</router-link>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              All Lessons
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li v-for="(number, index) in lessons" :key="index">
+                <router-link class="dropdown-item" :to="'/lesson' + number">
+                  Lesson{{ number }}
+                </router-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      lessons: 8,
+    };
+  },
+};
+</script>
