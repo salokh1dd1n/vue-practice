@@ -4,6 +4,7 @@ import About from "../views/About";
 import Lesson1 from "../views/Lesson1";
 import Lesson2 from "../views/Lesson2";
 import Lesson3 from "../views/Lesson3";
+import Lesson4 from "../views/Lesson4";
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: "/lesson3",
     name: "Lesson3",
     component: Lesson3,
+  },
+  {
+    path: "/lesson4",
+    name: "Lesson4",
+    component: Lesson4,
   },
 ];
 
