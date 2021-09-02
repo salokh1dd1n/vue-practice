@@ -9,6 +9,7 @@
     <router-link to="/lesson5">Lesson #5</router-link> |
     <router-link to="/lesson6">Lesson #6</router-link> |
     <router-link to="/lesson7">Lesson #7</router-link> |
+    <router-link to="/lesson8">Lesson #8</router-link> |
   </div>
   <router-view />
 </template>
