@@ -16,12 +16,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link active" aria-current="page" to="/">
+            <router-link
+              class="nav-link active"
+              aria-current="page"
+              :to="{ name: 'Home' }"
+            >
               Home
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about"> About</router-link>
+            <router-link class="nav-link" :to="{ name: 'About' }">
+              About
+            </router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -36,7 +42,10 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li v-for="(number, index) in lessons" :key="index">
-                <router-link class="dropdown-item" :to="'/lesson' + number">
+                <router-link
+                  class="dropdown-item"
+                  :to="{ name: 'Lesson' + number }"
+                >
                   Lesson{{ number }}
                 </router-link>
               </li>
