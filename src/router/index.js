@@ -7,6 +7,7 @@ import Lesson3 from "../views/Lesson3";
 import Lesson4 from "../views/Lesson4";
 import Lesson5 from "../views/Lesson5";
 import Lesson6 from "../views/Lesson6";
+import Lesson7 from "../views/Lesson7";
 
 const routes = [
   {
@@ -53,6 +54,11 @@ const routes = [
     path: "/lesson6",
     name: "Lesson6",
     component: Lesson6,
+  },
+  {
+    path: "/lesson7",
+    name: "Lesson7",
+    component: Lesson7,
   },
 ];
 
