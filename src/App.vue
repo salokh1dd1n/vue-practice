@@ -4,6 +4,7 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/lesson1">Lesson #1</router-link> |
     <router-link to="/lesson2">Lesson #2</router-link> |
+    <router-link to="/lesson3">Lesson #3</router-link> |
   </div>
   <router-view />
 </template>
