@@ -14,15 +14,15 @@ export default {
   },
   mounted() {
     if (this.score < 250) {
-      this.rank = "Incredible Reflexes";
+      this.rank = "Incredible Reflexes 🔥🔥🔥";
     } else if (this.score < 400) {
-      this.rank = "Rapid Reflexes";
+      this.rank = "Rapid Reflexes 👍👍👍";
     } else if (this.score < 600) {
-      this.rank = "Good Reflexes";
+      this.rank = "Good Reflexes 😉😉😉";
     } else if (this.score < 800) {
-      this.rank = "Normal Reflexes";
+      this.rank = "Normal Reflexes 🥱🥱🥱";
     } else {
-      this.rank = "Snail pace...";
+      this.rank = "Snail pace...🙅🙅🙅";
     }
   },
 };
