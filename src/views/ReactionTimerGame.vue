@@ -1,7 +1,7 @@
 <template>
   <div class="container text-center">
     <h2>Reaction Timer Game</h2>
-    <h3 v-if="showResults">Scope: {{ score }} ms</h3>
+    <results v-if="showResults" :score="score" />
     <button class="btn btn-primary" @click="start" :disabled="isPlaying">
       Start
     </button>
@@ -11,10 +11,11 @@
 
 <script>
 import Block from "../components/reaction-timer-game/Block";
+import Results from "../components/reaction-timer-game/Results";
 
 export default {
   name: "ReactionTimerGame",
-  components: { Block },
+  components: { Block, Results },
   data() {
     return {
       isPlaying: false,
