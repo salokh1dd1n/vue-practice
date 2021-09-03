@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Vue Lessons</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -41,7 +41,7 @@
               All Lessons
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li v-for="(number, index) in lessons" :key="index">
+              <li v-for="(number, index) in lessonsAmount" :key="index">
                 <router-link
                   class="dropdown-item"
                   :to="{ name: 'Lesson' + number }"
@@ -64,6 +64,17 @@
       </div>
     </div>
   </nav>
+  <div class="container d-flex justify-content-center">
+    <button type="button" @click="redirect" class="btn btn-primary me-2">
+      Redirect
+    </button>
+    <button type="button" @click="back" class="btn btn-primary me-2">
+      Go Back
+    </button>
+    <button type="button" @click="forward" class="btn btn-primary">
+      Go Forward
+    </button>
+  </div>
   <router-view />
 </template>
 
@@ -71,8 +82,19 @@
 export default {
   data() {
     return {
-      lessons: 8,
+      lessonsAmount: 8,
     };
+  },
+  methods: {
+    redirect() {
+      this.$router.push({ name: "Home" });
+    },
+    back() {
+      this.$router.go(-1);
+    },
+    forward() {
+      this.$router.go(1);
+    },
   },
 };
 </script>
