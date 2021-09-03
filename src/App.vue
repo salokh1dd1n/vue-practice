@@ -65,8 +65,14 @@
     </div>
   </nav>
   <div class="container d-flex justify-content-center">
-    <button type="button" @click="redirect" class="btn btn-primary">
+    <button type="button" @click="redirect" class="btn btn-primary me-2">
       Redirect
+    </button>
+    <button type="button" @click="back" class="btn btn-primary me-2">
+      Go Back
+    </button>
+    <button type="button" @click="forward" class="btn btn-primary">
+      Go Forward
     </button>
   </div>
   <router-view />
@@ -82,6 +88,12 @@ export default {
   methods: {
     redirect() {
       this.$router.push({ name: "Home" });
+    },
+    back() {
+      this.$router.go(-1);
+    },
+    forward() {
+      this.$router.go(1);
     },
   },
 };
