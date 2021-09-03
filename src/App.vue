@@ -64,6 +64,11 @@
       </div>
     </div>
   </nav>
+  <div class="container d-flex justify-content-center">
+    <button type="button" @click="redirect" class="btn btn-primary">
+      Redirect
+    </button>
+  </div>
   <router-view />
 </template>
 
@@ -73,6 +78,11 @@ export default {
     return {
       lessonsAmount: 8,
     };
+  },
+  methods: {
+    redirect() {
+      this.$router.push({ name: "Home" });
+    },
   },
 };
 </script>
