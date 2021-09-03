@@ -13,16 +13,22 @@ export default {
     };
   },
   mounted() {
-    if (this.score < 250) {
-      this.rank = "Incredible Reflexes 🔥🔥🔥";
-    } else if (this.score < 400) {
-      this.rank = "Rapid Reflexes 👍👍👍";
-    } else if (this.score < 600) {
-      this.rank = "Good Reflexes 😉😉😉";
-    } else if (this.score < 800) {
-      this.rank = "Normal Reflexes 🥱🥱🥱";
-    } else {
-      this.rank = "Snail pace...🙅🙅🙅";
+    switch (this.score) {
+      case this.score < 250:
+        this.rank = "Incredible Reflexes 🔥🔥🔥";
+        break;
+      case this.score < 400:
+        this.rank = "Rapid Reflexes 👍👍👍";
+        break;
+      case this.score < 600:
+        this.rank = "Good Reflexes 😉😉😉";
+        break;
+      case this.score < 800:
+        this.rank = "Normal Reflexes 🥱🥱🥱";
+        break;
+      default:
+        this.rank = "Snail pace...🙅🙅🙅";
+        break;
     }
   },
 };
