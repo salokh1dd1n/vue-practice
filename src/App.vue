@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Vue Lessons</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -41,7 +41,7 @@
               All Lessons
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li v-for="(number, index) in lessons" :key="index">
+              <li v-for="(number, index) in lessonsAmount" :key="index">
                 <router-link
                   class="dropdown-item"
                   :to="{ name: 'Lesson' + number }"
@@ -71,7 +71,7 @@
 export default {
   data() {
     return {
-      lessons: 8,
+      lessonsAmount: 8,
     };
   },
 };
