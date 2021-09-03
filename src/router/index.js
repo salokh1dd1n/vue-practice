@@ -10,6 +10,7 @@ import Lesson6 from "../views/Lesson6";
 import Lesson7 from "../views/Lesson7";
 import Lesson8 from "../views/Lesson8";
 import NotFound from "../views/NotFound";
+import ReactionTimerGame from "../views/ReactionTimerGame";
 
 const routes = [
   {
@@ -71,6 +72,11 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "NotFound",
     component: NotFound,
+  },
+  {
+    path: "/reaction-timer-game",
+    name: "ReactionTimerGame",
+    component: ReactionTimerGame,
   },
 ];
 

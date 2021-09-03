@@ -51,7 +51,21 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'ReactionTimerGame' }">
+              Reaction Timer Game
+            </router-link>
+          </li>
         </ul>
+        <button type="button" @click="redirect" class="btn btn-primary me-2">
+          Redirect
+        </button>
+        <button type="button" @click="back" class="btn btn-primary me-2">
+          Go Back
+        </button>
+        <button type="button" @click="forward" class="btn btn-primary me-2">
+          Go Forward
+        </button>
         <form class="d-flex">
           <input
             class="form-control me-2"
@@ -64,17 +78,6 @@
       </div>
     </div>
   </nav>
-  <div class="container d-flex justify-content-center">
-    <button type="button" @click="redirect" class="btn btn-primary me-2">
-      Redirect
-    </button>
-    <button type="button" @click="back" class="btn btn-primary me-2">
-      Go Back
-    </button>
-    <button type="button" @click="forward" class="btn btn-primary">
-      Go Forward
-    </button>
-  </div>
   <router-view />
 </template>
 
