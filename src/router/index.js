@@ -9,6 +9,7 @@ import Lesson5 from "../views/Lesson5";
 import Lesson6 from "../views/Lesson6";
 import Lesson7 from "../views/Lesson7";
 import Lesson8 from "../views/Lesson8";
+import NotFound from "../views/NotFound";
 
 const routes = [
   {
@@ -65,6 +66,11 @@ const routes = [
     path: "/lesson8",
     name: "Lesson8",
     component: Lesson8,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
