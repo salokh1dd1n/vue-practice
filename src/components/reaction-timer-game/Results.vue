@@ -1,6 +1,6 @@
 <template>
   <h3>Scope: {{ score }} ms</h3>
-  <div class="bg-info p-2">{{ rank }}</div>
+  <p>Rank: {{ rank }}</p>
 </template>
 
 <script>
@@ -13,12 +13,22 @@ export default {
     };
   },
   mounted() {
-    if (this.score < 250) {
-      this.rank = "Incredible Reflexes";
-    } else if (this.score < 400) {
-      this.rank = "Rapid Reflexes";
-    } else {
-      this.rank = "Snail pace...";
+    switch (this.score) {
+      case this.score < 250:
+        this.rank = "Incredible Reflexes 🔥🔥🔥";
+        break;
+      case this.score < 400:
+        this.rank = "Rapid Reflexes 👍👍👍";
+        break;
+      case this.score < 600:
+        this.rank = "Good Reflexes 😉😉😉";
+        break;
+      case this.score < 800:
+        this.rank = "Normal Reflexes 🥱🥱🥱";
+        break;
+      default:
+        this.rank = "Snail pace...🙅🙅🙅";
+        break;
     }
   },
 };
