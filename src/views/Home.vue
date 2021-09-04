@@ -1,7 +1,7 @@
 <template>
   <div class="home container text-center">
     <h3>Home Page</h3>
-    <p ref="p">My name is {{ name }} and I am {{ age }} year old</p>
+    <p ref="p">My name is {{ name }} and I am {{ age }} years old</p>
     <button class="btn btn-primary" @click="handleClick">Click me</button>
   </div>
 </template>
@@ -12,16 +12,13 @@ import { ref } from "vue";
 export default {
   name: "Home",
   setup() {
-    let name = "Salokhiddin";
-    let age = 17;
-    const p = ref(null);
+    let name = ref("Salokhiddin");
+    let age = ref(17);
     const handleClick = () => {
-      console.log(p);
-      console.log(p.value);
-      p.value.classList.add("test");
-      p.value.textContent = "Hello, World!";
+      name.value = "Lucas";
+      age.value = 23;
     };
-    return { name, age, handleClick, p };
+    return { name, age, handleClick };
   },
 };
 </script>
