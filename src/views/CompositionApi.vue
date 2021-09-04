@@ -17,12 +17,20 @@ export default {
       {
         id: 1,
         title: "Welcome to the blog",
-        body: "Lorem Ipsum",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
+          " Amet architecto eius esse et expedita illum nam quas repudiandae " +
+          "voluptatum. Adipisci, dolorem, reprehenderit! Assumenda deleniti " +
+          "distinctio ea ipsa. Illum magnam, porro.",
       },
       {
         id: 2,
         title: "Top 5 JavaScript tips",
-        body: "Lorem Ipsum",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
+          " Amet architecto eius esse et expedita illum nam quas repudiandae " +
+          "voluptatum. Adipisci, dolorem, reprehenderit! Assumenda deleniti " +
+          "distinctio ea ipsa. Illum magnam, porro.",
       },
     ]);
     return { posts };
