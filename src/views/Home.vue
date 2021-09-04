@@ -10,11 +10,17 @@
     <button class="btn btn-primary" @click="updateDevTwo">
       Updated with Ref
     </button>
+    <div class="searching mt-2">
+      <h2>Searching Engine:</h2>
+      <input type="text" v-model="search" />
+      <p>search term - {{ search }}</p>
+      <div v-for="name in matchingNames" :key="name">{{ name }}</div>
+    </div>
   </div>
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { computed, reactive, ref } from "vue";
 
 export default {
   name: "Home",
@@ -28,7 +34,28 @@ export default {
       devTwo.name = "Just Lucas";
       devTwo.age = 17;
     };
-    return { devOne, updateDevOne, devTwo, updateDevTwo };
+
+    const search = ref("");
+    const names = ref([
+      "salokhiddin",
+      "najmiddin",
+      "kamoliddin",
+      "isroil",
+      "samandar",
+      "azim",
+      "sanjar",
+    ]);
+    const matchingNames = computed(() => {
+      return names.value.filter((name) => name.includes(search.value));
+    });
+    return {
+      devOne,
+      updateDevOne,
+      devTwo,
+      updateDevTwo,
+      matchingNames,
+      search,
+    };
   },
 };
 </script>
