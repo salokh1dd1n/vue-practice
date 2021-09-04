@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref, watch, watchEffect } from "vue";
+import { ref, reactive, computed, watch, watchEffect } from "vue";
 
 export default {
   name: "Home",
