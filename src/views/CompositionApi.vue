@@ -1,12 +1,15 @@
 <template>
   <div class="container text-center">Composition Api</div>
+  <post-list />
 </template>
 
 <script>
 import { ref } from "vue";
+import PostList from "../components/composition-api/PostList";
 
 export default {
   name: "CompositionApi",
+  components: { PostList },
   setup() {
     const posts = ref([
       {
