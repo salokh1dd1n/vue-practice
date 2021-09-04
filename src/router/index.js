@@ -11,6 +11,7 @@ import Lesson7 from "../views/Lesson7";
 import Lesson8 from "../views/Lesson8";
 import NotFound from "../views/NotFound";
 import ReactionTimerGame from "../views/ReactionTimerGame";
+import CompositionApi from "../views/CompositionApi";
 
 const routes = [
   {
@@ -77,6 +78,11 @@ const routes = [
     path: "/reaction-timer-game",
     name: "ReactionTimerGame",
     component: ReactionTimerGame,
+  },
+  {
+    path: "/composition-api",
+    name: "CompositionApi",
+    component: CompositionApi,
   },
 ];
 

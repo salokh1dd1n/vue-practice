@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">Vue Lessons</a>
       <button
         class="navbar-toggler"
@@ -54,6 +54,11 @@
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'ReactionTimerGame' }">
               Reaction Timer Game
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'CompositionApi' }">
+              Composition Api
             </router-link>
           </li>
         </ul>
