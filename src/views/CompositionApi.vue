@@ -1,7 +1,13 @@
 <template>
   <div class="container text-center">
     <h5>Composition Api</h5>
-    <post-list :posts="posts" />
+    <post-list v-if="showPosts" :posts="posts" />
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary" @click="showPosts = !showPosts">
+        Toggle posts
+      </button>
+      <button class="btn btn-warning" @click="posts.pop()">Delete post</button>
+    </div>
   </div>
 </template>
 
@@ -33,7 +39,8 @@ export default {
           "distinctio ea ipsa. Illum magnam, porro.",
       },
     ]);
-    return { posts };
+    const showPosts = ref(true);
+    return { posts, showPosts };
   },
 };
 </script>
