@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref } from "vue";
+import { computed, reactive, ref, watch, watchEffect } from "vue";
 
 export default {
   name: "Home",
@@ -47,6 +47,12 @@ export default {
     ]);
     const matchingNames = computed(() => {
       return names.value.filter((name) => name.includes(search.value));
+    });
+    watch(search, () => {
+      // console.log("watch function ran Search term - " + search.value);
+    });
+    watchEffect(() => {
+      // console.log("watchEffect function ran Search term - " + search.value);
     });
     return {
       devOne,
