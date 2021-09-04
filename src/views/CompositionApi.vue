@@ -1,6 +1,6 @@
 <template>
   <div class="container text-center">Composition Api</div>
-  <post-list />
+  <post-list :posts="posts" />
 </template>
 
 <script>
