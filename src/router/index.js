@@ -12,6 +12,7 @@ import Lesson8 from "../views/Lesson8";
 import NotFound from "../views/NotFound";
 import ReactionTimerGame from "../views/ReactionTimerGame";
 import CompositionApi from "../views/CompositionApi";
+import FetchingData from "../views/FetchingData";
 
 const routes = [
   {
@@ -83,6 +84,11 @@ const routes = [
     path: "/composition-api",
     name: "CompositionApi",
     component: CompositionApi,
+  },
+  {
+    path: "/fetching-data",
+    name: "FetchingData",
+    component: FetchingData,
   },
 ];
 

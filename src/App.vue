@@ -57,6 +57,11 @@
             </router-link>
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'FetchingData' }">
+              Fetching Data
+            </router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'CompositionApi' }">
               Composition Api
             </router-link>
