@@ -1,30 +1,34 @@
 <template>
   <div class="home container text-center">
-    <h3>Home Page</h3>
-    <p ref="p">My name is {{ name }} and I am {{ age }} years old</p>
-    <div class="d-flex justify-content-center">
-      <button class="btn btn-primary me-2" @click="handleClick">
-        Click me
-      </button>
-      <button class="btn btn-primary me-2" @click="age++">Add +1 to age</button>
-      <input type="text" class="form-control w-25" v-model="name" />
-    </div>
+    <h2>Refs:</h2>
+    <p>{{ devOne.name }} - {{ devOne.age }}</p>
+    <button class="btn btn-primary" @click="updateDevOne">
+      Updated with Ref
+    </button>
+    <h2>Reactive:</h2>
+    <p>{{ devTwo.name }} - {{ devTwo.age }}</p>
+    <button class="btn btn-primary" @click="updateDevTwo">
+      Updated with Ref
+    </button>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 export default {
   name: "Home",
   setup() {
-    let name = ref("Salokhiddin");
-    let age = ref(17);
-    const handleClick = () => {
-      name.value = "Lucas";
-      age.value = 23;
+    const devOne = ref({ name: ref("Salokhiddin"), age: 17 });
+    const devTwo = reactive({ name: ref("Lucas"), age: 23 });
+    const updateDevOne = () => {
+      devOne.value.name = "Berdiyorov Salokhiddin";
     };
-    return { name, age, handleClick };
+    const updateDevTwo = () => {
+      devTwo.name = "Just Lucas";
+      devTwo.age = 17;
+    };
+    return { devOne, updateDevOne, devTwo, updateDevTwo };
   },
 };
 </script>
