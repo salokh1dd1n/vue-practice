@@ -13,17 +13,17 @@ export default {
     };
   },
   mounted() {
-    switch (this.score) {
-      case this.score < 250:
+    switch (true) {
+      case this.score <= 250:
         this.rank = "Incredible Reflexes 🔥🔥🔥";
         break;
-      case this.score < 400:
+      case this.score <= 400:
         this.rank = "Rapid Reflexes 👍👍👍";
         break;
-      case this.score < 600:
+      case this.score <= 600:
         this.rank = "Good Reflexes 😉😉😉";
         break;
-      case this.score < 800:
+      case this.score <= 800:
         this.rank = "Normal Reflexes 🥱🥱🥱";
         break;
       default:
