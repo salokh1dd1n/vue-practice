@@ -1,0 +1,19 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "UX Designer",
+      "body": "Lorem Ipsum"
+    },
+    {
+      "id": 2,
+      "title": "Web Developer",
+      "body": "Lorem Ipsum"
+    },
+    {
+      "id": 3,
+      "title": "Game Developer",
+      "body": "Lorem Ipsum"
+    }
+  ]
+}
