@@ -1,6 +1,19 @@
 <template>
-  <h3>{{ post.title }}</h3>
-  <p>{{ snippet }}</p>
+  <div>
+    <h3>
+      <router-link :to="{ name: 'PostDetails', params: { id: post.id } }">
+        {{ post.title }}
+      </router-link>
+    </h3>
+    <p>{{ snippet }}</p>
+  </div>
+  <!--  <span-->
+  <!--    class="badge bg-primary me-2 mb-3"-->
+  <!--    v-for="(tag, index) in post.tags"-->
+  <!--    :key="index"-->
+  <!--  >-->
+  <!--    #{{ tag }}-->
+  <!--  </span>-->
 </template>
 
 <script>
@@ -13,7 +26,6 @@ export default {
     const snippet = computed(() => {
       return props.post.body.substring(0, 100) + "...";
     });
-
     return { snippet };
   },
 };
