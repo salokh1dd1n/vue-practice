@@ -66,6 +66,11 @@
               Composition Api
             </router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'Vuex' }">
+              VueX
+            </router-link>
+          </li>
         </ul>
         <button type="button" @click="redirect" class="btn btn-primary me-2">
           Redirect
