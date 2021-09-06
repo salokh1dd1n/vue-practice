@@ -11,9 +11,10 @@ import Lesson7 from "../views/Lesson7";
 import Lesson8 from "../views/Lesson8";
 import NotFound from "../views/NotFound";
 import ReactionTimerGame from "../views/ReactionTimerGame";
-import CompositionApi from "../views/CompositionApi";
 import JobDetails from "../views/fetching-data/JobDetails";
 import Jobs from "../views/fetching-data/Jobs";
+import Posts from "../views/composition-api/Posts";
+import PostDetails from "../views/composition-api/PostDetails";
 
 const routes = [
   {
@@ -83,8 +84,14 @@ const routes = [
   },
   {
     path: "/composition-api",
-    name: "CompositionApi",
-    component: CompositionApi,
+    name: "Posts",
+    component: Posts,
+  },
+  {
+    path: "/post/:id",
+    name: "PostDetails",
+    component: PostDetails,
+    props: true,
   },
   {
     path: "/fetching-data",

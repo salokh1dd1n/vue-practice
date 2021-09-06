@@ -62,7 +62,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'CompositionApi' }">
+            <router-link class="nav-link" :to="{ name: 'Posts' }">
               Composition Api
             </router-link>
           </li>
