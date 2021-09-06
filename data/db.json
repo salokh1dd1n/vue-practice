@@ -15,5 +15,27 @@
       "title": "Game Developer",
       "body": "Lorem Ipsum"
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum facilis iste minus natus quae, quaerat reiciendis voluptatibus! Culpa eos magni quas repudiandae suscipit ullam? Amet consectetur dolorem illo similique.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum facilis iste minus natus quae, quaerat reiciendis voluptatibus! Culpa eos magni quas repudiandae suscipit ullam? Amet consectetur dolorem illo similique.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    }
   ]
 }

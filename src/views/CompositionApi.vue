@@ -1,7 +1,11 @@
 <template>
   <div class="container text-center">
     <h5>Composition Api</h5>
-    <post-list v-if="showPosts" :posts="posts" />
+    <div v-if="error">{{ error }}</div>
+    <div v-if="posts.length">
+      <post-list v-if="showPosts" :posts="posts" />
+    </div>
+    <div v-else>Posts are Loading...</div>
     <div class="d-flex justify-content-center">
       <button class="btn btn-primary" @click="showPosts = !showPosts">
         Toggle posts
@@ -19,28 +23,23 @@ export default {
   name: "CompositionApi",
   components: { PostList },
   setup() {
-    const posts = ref([
-      {
-        id: 1,
-        title: "Welcome to the blog",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
-          " Amet architecto eius esse et expedita illum nam quas repudiandae " +
-          "voluptatum. Adipisci, dolorem, reprehenderit! Assumenda deleniti " +
-          "distinctio ea ipsa. Illum magnam, porro.",
-      },
-      {
-        id: 2,
-        title: "Top 5 JavaScript tips",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
-          " Amet architecto eius esse et expedita illum nam quas repudiandae " +
-          "voluptatum. Adipisci, dolorem, reprehenderit! Assumenda deleniti " +
-          "distinctio ea ipsa. Illum magnam, porro.",
-      },
-    ]);
+    const posts = ref([]);
+    const error = ref(null);
+    const load = async () => {
+      try {
+        let data = await fetch("http://localhost:3000/posts");
+        if (!data.ok) {
+          throw new Error("No data available");
+        }
+        posts.value = await data.json();
+      } catch (err) {
+        error.value = err.message;
+        console.log(error.value);
+      }
+    };
+    load();
     const showPosts = ref(true);
-    return { posts, showPosts };
+    return { posts, showPosts, error };
   },
 };
 </script>
