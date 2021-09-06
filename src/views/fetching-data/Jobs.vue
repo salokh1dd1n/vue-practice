@@ -1,16 +1,21 @@
 <template>
   <div class="container text-center">
     <div class="card" v-for="job in jobs" :key="job.id">
-      <div class="card-body">
-        <h3>{{ job.title }}</h3>
+      <div class="card-body" v-if="jobs.length">
+        <h3>
+          <router-link :to="{ name: 'JobDetails', params: { id: job.id } }">
+            {{ job.title }}
+          </router-link>
+        </h3>
       </div>
+      <div v-else>Jobs are loading...</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "FetchingData",
+  name: "Jobs",
   data() {
     return {
       jobs: [],

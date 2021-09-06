@@ -57,7 +57,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'FetchingData' }">
+            <router-link class="nav-link" :to="{ name: 'Jobs' }">
               Fetching Data
             </router-link>
           </li>

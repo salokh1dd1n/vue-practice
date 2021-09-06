@@ -12,7 +12,8 @@ import Lesson8 from "../views/Lesson8";
 import NotFound from "../views/NotFound";
 import ReactionTimerGame from "../views/ReactionTimerGame";
 import CompositionApi from "../views/CompositionApi";
-import FetchingData from "../views/FetchingData";
+import JobDetails from "../views/fetching-data/JobDetails";
+import Jobs from "../views/fetching-data/Jobs";
 
 const routes = [
   {
@@ -87,8 +88,14 @@ const routes = [
   },
   {
     path: "/fetching-data",
-    name: "FetchingData",
-    component: FetchingData,
+    name: "Jobs",
+    component: Jobs,
+  },
+  {
+    path: "/job/:id",
+    name: "JobDetails",
+    props: true,
+    component: JobDetails,
   },
 ];
 
