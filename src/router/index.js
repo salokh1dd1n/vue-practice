@@ -85,8 +85,14 @@ const routes = [
   },
   {
     path: "/composition-api",
-    name: "CompositionApi",
-    component: CompositionApi,
+    name: "Posts",
+    component: Posts,
+  },
+  {
+    path: "/post/:id",
+    name: "PostDetails",
+    component: PostDetails,
+    props: true,
   },
   {
     path: "/fetching-data",
@@ -98,6 +104,11 @@ const routes = [
     name: "JobDetails",
     props: true,
     component: JobDetails,
+  },
+  {
+    path: "/vuex",
+    name: "Vuex",
+    component: VuexPosts,
   },
 ];
 
