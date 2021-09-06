@@ -1,4 +1,4 @@
-# vue-lessons
+# vue-practice
 
 ## Project setup
 ```
