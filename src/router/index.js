@@ -15,6 +15,7 @@ import JobDetails from "../views/fetching-data/JobDetails";
 import Jobs from "../views/fetching-data/Jobs";
 import Posts from "../views/composition-api/Posts";
 import PostDetails from "../views/composition-api/PostDetails";
+import VuexPosts from "../views/vuex/Posts";
 
 const routes = [
   {
@@ -84,14 +85,8 @@ const routes = [
   },
   {
     path: "/composition-api",
-    name: "Posts",
-    component: Posts,
-  },
-  {
-    path: "/post/:id",
-    name: "PostDetails",
-    component: PostDetails,
-    props: true,
+    name: "CompositionApi",
+    component: CompositionApi,
   },
   {
     path: "/fetching-data",
