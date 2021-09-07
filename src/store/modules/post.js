@@ -12,16 +12,24 @@ export default {
     updatePost(state, posts) {
       state.posts = posts;
     },
+    createPost(state, newPost) {
+      state.posts.unshift(newPost);
+    },
   },
   state: {
     posts: [],
   },
   getters: {
+    validPosts(state) {
+      return state.posts.filter((post) => {
+        return post.title && post.body;
+      });
+    },
     posts(state) {
       return state.posts;
     },
-    length() {
-      return this.posts.length;
+    length(state, getters) {
+      return getters.validPosts.length;
     },
   },
 };
