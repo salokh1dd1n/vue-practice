@@ -15,7 +15,7 @@ export default {
     posts: [],
   },
   getters: {
-    getPosts(state) {
+    posts(state) {
       return state.posts;
     },
   },
