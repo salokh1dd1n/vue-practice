@@ -1,6 +1,6 @@
 export default {
   actions: {
-    async fetchPosts({ commit, getters, dispatch }, length = 10) {
+    async fetchPosts({ commit, dispatch }, length = 10) {
       const res = await fetch(
         "https://jsonplaceholder.typicode.com/posts?_limit=" + length,
       );
