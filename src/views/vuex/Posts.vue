@@ -21,16 +21,13 @@
 <script>
 export default {
   name: "Posts",
-  data() {
-    return {
-      posts: [],
-    };
+  computed: {
+    posts() {
+      return this.$store.getters.getPosts;
+    },
   },
   async mounted() {
-    await fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => (this.posts = data))
-      .catch((error) => console.log(error));
+    this.$store.dispatch("fetchPosts");
   },
 };
 </script>
