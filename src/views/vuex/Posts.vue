@@ -2,6 +2,7 @@
   <div class="container">
     <div class="row">
       <h2 class="text-center my-3">Posts:</h2>
+      <p>Amount of posts: {{ length }}</p>
       <div class="col-4 mb-3" v-for="post in posts" :key="post.id">
         <div class="card h-100">
           <div class="card-body">
@@ -28,11 +29,11 @@ export default {
   //     return this.$store.getters.getPosts;
   //   },
   // },
-  computed: mapGetters(["posts"]),
+  computed: mapGetters(["posts", "length"]),
   methods: mapActions(["fetchPosts"]),
   async mounted() {
     // this.$store.dispatch("fetchPosts");
-    await this.fetchPosts();
+    await this.fetchPosts(15);
   },
 };
 </script>
