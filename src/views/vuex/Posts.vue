@@ -19,18 +19,20 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "Posts",
-  data() {
-    return {
-      posts: [],
-    };
-  },
+  // computed: {
+  //   posts() {
+  //     return this.$store.getters.getPosts;
+  //   },
+  // },
+  computed: mapGetters(["posts"]),
+  methods: mapActions(["fetchPosts"]),
   async mounted() {
-    await fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => (this.posts = data))
-      .catch((error) => console.log(error));
+    // this.$store.dispatch("fetchPosts");
+    await this.fetchPosts();
   },
 };
 </script>
