@@ -19,15 +19,20 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "Posts",
-  computed: {
-    posts() {
-      return this.$store.getters.getPosts;
-    },
-  },
+  // computed: {
+  //   posts() {
+  //     return this.$store.getters.getPosts;
+  //   },
+  // },
+  computed: mapGetters(["posts"]),
+  methods: mapActions(["fetchPosts"]),
   async mounted() {
-    this.$store.dispatch("fetchPosts");
+    // this.$store.dispatch("fetchPosts");
+    await this.fetchPosts();
   },
 };
 </script>
