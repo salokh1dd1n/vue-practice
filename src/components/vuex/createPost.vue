@@ -47,7 +47,12 @@
           >
             Close
           </button>
-          <button type="button" @click="submit" class="btn btn-primary">
+          <button
+            type="button"
+            @click="submit"
+            :disabled="!isValid"
+            class="btn btn-primary"
+          >
             Save changes
           </button>
         </div>
@@ -65,8 +70,12 @@ export default {
     return {
       title: "",
       body: "",
-      isModalOpen: true,
     };
+  },
+  computed: {
+    isValid() {
+      return !(this.title === "" || this.body === "");
+    },
   },
   methods: {
     ...mapMutations(["createPost"]),

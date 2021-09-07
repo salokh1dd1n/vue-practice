@@ -1,11 +1,15 @@
 export default {
   actions: {
-    async fetchPosts(ctx, length = 10) {
+    async fetchPosts({ commit, dispatch }, length = 10) {
       const res = await fetch(
         "https://jsonplaceholder.typicode.com/posts?_limit=" + length,
       );
       const posts = await res.json();
-      ctx.commit("updatePost", posts);
+      commit("updatePost", posts);
+      dispatch("sayHello");
+    },
+    sayHello() {
+      console.log("Hello, World");
     },
   },
   mutations: {
